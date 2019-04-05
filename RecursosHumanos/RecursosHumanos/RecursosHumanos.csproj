@@ -105,20 +105,27 @@
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <EntityDeploy Include="Models\Mantenimientos.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Mantenimientos.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Mantenimientos.edmx.diagram">
+      <DependentUpon>Mantenimientos.edmx</DependentUpon>
+    </Content>
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Models\Mantenimientos.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Mantenimientos.Context.cs</LastGenOutput>
       <DependentUpon>Mantenimientos.edmx</DependentUpon>
+      <LastGenOutput>Mantenimientos.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Models\Mantenimientos.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Mantenimientos.edmx</DependentUpon>
       <LastGenOutput>Mantenimientos.cs</LastGenOutput>
     </Content>
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -158,6 +165,9 @@
     <Compile Include="Models\Empleado.cs">
       <DependentUpon>Mantenimientos.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Licencia.cs">
+      <DependentUpon>Mantenimientos.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Mantenimientos.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -173,17 +183,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Mantenimientos.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\Permiso.cs">
+      <DependentUpon>Mantenimientos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Salida_Empleados.cs">
+      <DependentUpon>Mantenimientos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Tipo_Salida.cs">
+      <DependentUpon>Mantenimientos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Vacacione.cs">
+      <DependentUpon>Mantenimientos.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
-    <EntityDeploy Include="Models\Mantenimientos.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Mantenimientos.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\Mantenimientos.edmx.diagram">
-      <DependentUpon>Mantenimientos.edmx</DependentUpon>
-    </Content>
     <None Include="packages.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />

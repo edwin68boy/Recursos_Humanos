@@ -12,7 +12,7 @@ namespace RecursosHumanos.Controllers
 {
     public class CargoesController : Controller
     {
-        private DatabaseEntities db = new DatabaseEntities();
+        private DatabaseEntities4 db = new DatabaseEntities4();
 
         // GET: Cargoes
         public ActionResult Index()

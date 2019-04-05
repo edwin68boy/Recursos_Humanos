@@ -13,10 +13,10 @@ namespace RecursosHumanos.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DatabaseEntities : DbContext
+    public partial class DatabaseEntities4 : DbContext
     {
-        public DatabaseEntities()
-            : base("name=DatabaseEntities")
+        public DatabaseEntities4()
+            : base("name=DatabaseEntities4")
         {
         }
     
@@ -28,5 +28,10 @@ namespace RecursosHumanos.Models
         public virtual DbSet<Cargo> Cargoes { get; set; }
         public virtual DbSet<Departamento> Departamentos { get; set; }
         public virtual DbSet<Empleado> Empleados { get; set; }
+        public virtual DbSet<Licencia> Licencias { get; set; }
+        public virtual DbSet<Permiso> Permisos { get; set; }
+        public virtual DbSet<Salida_Empleados> Salida_Empleados { get; set; }
+        public virtual DbSet<Tipo_Salida> Tipo_Salida { get; set; }
+        public virtual DbSet<Vacacione> Vacaciones { get; set; }
     }
 }

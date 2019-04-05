@@ -12,7 +12,7 @@ namespace RecursosHumanos.Controllers
 {
     public class EmpleadoesController : Controller
     {
-        private DatabaseEntities db = new DatabaseEntities();
+        private DatabaseEntities4 db = new DatabaseEntities4();
         private string searchby;
 
         // GET: Empleadoes

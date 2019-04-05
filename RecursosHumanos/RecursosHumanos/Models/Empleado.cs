@@ -14,6 +14,15 @@ namespace RecursosHumanos.Models
     
     public partial class Empleado
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Empleado()
+        {
+            this.Permisos = new HashSet<Permiso>();
+            this.Salida_Empleados = new HashSet<Salida_Empleados>();
+            this.Licencias = new HashSet<Licencia>();
+            this.Vacaciones = new HashSet<Vacacione>();
+        }
+    
         public int Id { get; set; }
         public int Codigo_Empleado { get; set; }
         public string Nombre { get; set; }
@@ -27,5 +36,13 @@ namespace RecursosHumanos.Models
     
         public virtual Cargo Cargo1 { get; set; }
         public virtual Departamento Departamento1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Permiso> Permisos { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Salida_Empleados> Salida_Empleados { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Licencia> Licencias { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Vacacione> Vacaciones { get; set; }
     }
 }
